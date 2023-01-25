@@ -5,14 +5,12 @@ public class Main {
 
     public static void main(String[] args) {
         File files = new File ("/Users/ansarismagilov/Downloads/mosh course");
-        String[] catalog = files.list();
-        double totalBytes = 0.0;
-
-        for (var item : catalog){
-            totalBytes += item.length();
+        String[] names = files.list();
+        int size = 0;
+        for (var item : names){
+            size += new File("/Users/ansarismagilov/Downloads/mosh course/" + item).length();
         }
-
-        System.out.println(totalBytes);
+        System.out.println(size);
 
     }
 }
