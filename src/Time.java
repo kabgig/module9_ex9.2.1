@@ -1,10 +1,13 @@
 import java.util.Calendar;
+import java.text.SimpleDateFormat;
 
 public class Time {
-    int millis = 1000;
+    String date = "";
     public void getTime() {
         Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(millis);
-        System.out.println(calendar.getTime());
+        calendar.setTimeInMillis(1);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY MMM DD HH:mm:ss");
+        date = dateFormat.format(calendar.getTime());
+        System.out.println(date);
     }
 }
