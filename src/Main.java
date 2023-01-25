@@ -1,5 +1,4 @@
 import java.io.File;
-import java.util.Calendar;
 
 public class Main {
 
@@ -8,9 +7,9 @@ public class Main {
         String[] names = files.list();
         int size = 0;
         for (var item : names){
-            size += new File("/Users/ansarismagilov/Downloads/mosh course/" + item).length();
+            size += new File("/Users/ansarismagilov/Downloads/mosh course/" + item).length() / 1000000;
         }
-        System.out.println(size);
+        System.out.println(size + "MB");
 
     }
 }
